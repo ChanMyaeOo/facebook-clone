@@ -12,7 +12,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ user }) => {
     return(
         <div className="header">
             <div className="header__left">
@@ -41,8 +41,8 @@ const Header = () => {
             </div>
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar />
-                    <h4>Chan Myae Oo</h4>
+                    <Avatar src={user.photoURL}/>
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 <IconButton>
